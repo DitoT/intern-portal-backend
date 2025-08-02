@@ -5,6 +5,10 @@ const PORT = 5000;
 
 app.use(cors());
 
+app.use(cors({
+  origin: 'https://DitoT.github.io'
+}));
+
 const dummyData = {
   name: "Dimitri Tutberidze",
   referralCode: "dimitri2025",

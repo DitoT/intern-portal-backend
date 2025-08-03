@@ -27,11 +27,16 @@ app.get('/api/intern', (req, res) => {
   });
 });
 
+// API route to get leaderboard data
+app.get('/api/leaderboard', (req, res) => {
+  res.json(dummyData.leaderboard);
+});
+
+// Root route for info
 app.get('/', (req, res) => {
   res.json({
     message: "Welcome to the Intern Portal backend API",
-    leaderboard: dummyData.leaderboard,
-    availableRoutes: ["/api/intern"]
+    availableRoutes: ["/api/intern", "/api/leaderboard"]
   });
 });
 

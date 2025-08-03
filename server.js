@@ -28,7 +28,7 @@ app.get('/api/intern', (req, res) => {
   });
 });
 
-app.get('/api/leaderboard', (req, res) => {
+app.get('/', (req, res) => {
   res.json(dummyData.leaderboard);
 });
 

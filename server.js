@@ -3,9 +3,7 @@ const cors = require('cors');
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-app.use(cors({
-  origin: 'https://ditot.github.io'
-}));
+app.use(cors());
 
 const dummyData = {
   name: "Dimitri Tutberidze",

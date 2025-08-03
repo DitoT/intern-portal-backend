@@ -18,6 +18,7 @@ const dummyData = {
   ],
 };
 
+// API route to get intern data
 app.get('/api/intern', (req, res) => {
   res.json({
     name: dummyData.name,
@@ -27,7 +28,11 @@ app.get('/api/intern', (req, res) => {
 });
 
 app.get('/', (req, res) => {
-  res.json(dummyData.leaderboard);
+  res.json({
+    message: "Welcome to the Intern Portal backend API",
+    leaderboard: dummyData.leaderboard,
+    availableRoutes: ["/api/intern"]
+  });
 });
 
-app.listen(PORT, () => console.log(`Server running on http://localhost:${PORT}`));
+app.listen(PORT, () => console.log(`Server running on port ${PORT}`));
